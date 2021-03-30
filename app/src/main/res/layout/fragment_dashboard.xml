@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="48dp"
+    tools:context=".ui.fragment.dashboard.DashboardFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/light_blue"
+        android:paddingBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="196dp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/lvProducts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/shoppingbag" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="2dp"
+        android:text="New Arrivals"
+        android:textColor="@color/grey_100"
+        android:textSize="20dp"
+        fontPath="fonts/OpenSans-Bold.ttf"
+        app:layout_constraintBottom_toTopOf="@+id/lvProducts"
+        app:layout_constraintStart_toEndOf="@+id/animationView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/purple_500"
+        android:gravity="center"
+        android:drawableRight="@drawable/ic_baseline_navigate_next_24"
+        android:text="More"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/lvProducts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
